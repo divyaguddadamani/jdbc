@@ -1,4 +1,4 @@
-package com.xworkz.jdbc.data;
+package com.xworkz.jdbc.data.data;
 
 public class Hostel {
 	static {

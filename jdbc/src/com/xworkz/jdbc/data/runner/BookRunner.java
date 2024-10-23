@@ -1,11 +1,12 @@
 package com.xworkz.jdbc.data.runner;
 
-import com.xworkz.jdbc.data.Book;
+import com.xworkz.jdbc.data.data.Book;
 
 public class BookRunner {
 
 	public static void main(String[] args) {
 		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			Class.forName("com.xworkz.jdbc.data.Book");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
