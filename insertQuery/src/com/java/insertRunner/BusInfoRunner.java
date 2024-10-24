@@ -12,7 +12,7 @@ public class BusInfoRunner {
 		String name="root";
 		String password="Xworkzodc@123";
 		String insertQuery
-		="insert into bus_table values(111,'RSRTC',53)";
+		="insert into bus_table values(120,'DIVYA',35)";
 		
 
 		Connection connection=null;

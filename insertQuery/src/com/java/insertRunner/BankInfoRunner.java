@@ -12,7 +12,7 @@ public class BankInfoRunner {
 		String userName="root";
 		String password="Xworkzodc@123";
 		String insertQuery=
-			"insert into bank_details values(210, 'Bank of India', 'BOI0002468')";
+			"insert into bank_details values(221, 'UCO', 'UCO0002468')";
 		
 		Connection connection=null;
 		try {
