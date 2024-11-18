@@ -15,13 +15,15 @@ public class JobServiceImpl implements JobService {
 		System.out.println("phone:"+dto.getPhone());
 		System.out.println("address:"+dto.getAddress());
 		System.out.println("email:"+dto.getEmail());
+		
 		if(isValid) {
 		JobRepoImpl repo= new JobRepoImpl();
 		boolean ref=repo.save(dto);
+		System.out.println(ref);
 		}
 		
 		
-			return false;
+			return isValid;
 		
 		
 	}

@@ -1,4 +1,4 @@
-package com.xworkz.jdbc.service;
+ package com.xworkz.jdbc.service;
 
 import com.xworkz.jdbc.dto.JobDto;
 

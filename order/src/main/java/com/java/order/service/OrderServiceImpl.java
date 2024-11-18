@@ -17,9 +17,10 @@ public class OrderServiceImpl implements OrderService {
 		if(isvalid) {
 		OrderrepoImpl repo= new OrderrepoImpl();
 		boolean ref=repo.save(dto);
+		System.out.println(ref);
 		
 		}
-	return false;
+	return isvalid;
 	}
 
 }

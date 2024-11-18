@@ -2,6 +2,7 @@ package com.java.order.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,13 +23,25 @@ public class OrderServlet  extends HttpServlet{
 		 String Phone=req.getParameter("phone");
 		 String quantity=req.getParameter("quantity");
 		 
-		 OrderDto dto= new OrderDto(fname, price, customerName, Phone, quantity);
+		 int ref=Integer.valueOf(price);
+		 
+		 OrderDto dto= new OrderDto(fname, ref,customerName, Phone, quantity);
 		 OrderServiceImpl serve=new OrderServiceImpl();
-		serve.result(dto);
+		boolean refs=serve.result(dto);
+		if(refs)
+		{
+		    req.setAttribute("msg", "saved");
+			System.out.println("is saved");
+		}
+		else {
+			req.setAttribute("msgs", "not saved");
+			System.out.println("is not saved");
+		}
 		
 
 		 
-		 
+		 RequestDispatcher dispatcher=req.getRequestDispatcher("index.jsp");
+		 dispatcher.forward(req, resp);
 		 
 		 
 	}

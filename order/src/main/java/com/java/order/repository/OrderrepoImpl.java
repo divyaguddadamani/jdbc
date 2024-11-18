@@ -31,7 +31,7 @@ public class OrderrepoImpl implements OrderRepo{
 			connection=DriverManager.getConnection(OrderEnum.URL.getvalue(),OrderEnum.USERNAME.getvalue(),OrderEnum.PASSWORD.getvalue());
 			prst=connection.prepareStatement("insert into order_table values(?,?,?,?,?)");
 			prst.setString(1, dto.getFood_name());
-			prst.setString(2, dto.getPrice());
+			prst.setInt(2, dto.getPrice());
 			prst.setString(3, dto.getC_name());
 			prst.setString(4, dto.getC_phone());
 			prst.setString(5, dto.getQuantity());

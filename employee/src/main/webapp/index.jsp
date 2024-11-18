@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>x-workz</title>
+<title>Insert title here</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<style type="text/css">
@@ -23,38 +23,35 @@
 	
 </head>
 <body>
-   
-
 <form action="send" method="post">
 
-<span style="color:green" >${msg}</span>
-<span style="color:red"> ${msgs}</span>
+<span style="color:green" >${success}</span>
+<span style="color:red"> ${failure}</span>
 
       <h1>person info</h1>
        
-        <label>Name</label><br>
+        <label>ID</label><br>
+        <input type="number" name="id" id="id" required="required"><br>
+
+		<label>NAME</label><br>
         <input type="text" name="name" id="name" required="required"><br>
 
+ 		<label>Phone number</label><br>
+        <input type="number" name="number" id="phone" required="required"><br>
 
-       
+       <label>Email</label><br>
+        <input type="text" name="email" id="email" required="required"><br>
+        
+        
         <label>Age</label><br>
         <input type="number" name="age" id="age" required="required"><br>
 
-        
-        <label>Phone number</label><br>
-        <input type="number" name="number" id="phone" required="required"><br>
-
        
-        <label>address</label><br>
-        <input type="text" name="addr" id="add" required="required"><br>
-
-       
-        <label>email</label><br>
-        <input type="email" name="email" id="email" required="required"><br>
+        <label>Sal</label><br>
+        <input type="number" name="sal" id="sal" required="required"><br>
         <br>
 
-        <input type="submit" value="send" style="background-color: blue">
-
+        <input type="submit" value="send" style="background-color: green">
 
         </form>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

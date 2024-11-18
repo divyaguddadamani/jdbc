@@ -22,7 +22,14 @@
 	</style>
 </head>
 <body>
+
+
+
 <form action="order" method="post">
+
+<span style="color:green" >${msg}</span>
+<span style="color:red"> ${msgs}</span>
+
 <h1>Order form</h1>
 
  <label>Food name</label><br>

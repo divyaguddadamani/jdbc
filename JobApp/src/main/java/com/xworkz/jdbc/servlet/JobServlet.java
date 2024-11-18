@@ -2,6 +2,7 @@ package com.xworkz.jdbc.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,7 +29,23 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 	 JobDto dto=new JobDto(name, age, phone,address,email);
 	 JobServiceImpl serve=new JobServiceImpl();
 	 
-	 serve.save(dto);
+	 boolean variables=serve.save(dto);
+	 if(variables)
+	 {
+
+		    req.setAttribute("msg", "saved");
+			System.out.println("is saved");
+	 }
+	 else {
+			req.setAttribute("msgs", "not saved");
+			System.out.println("is not saved");
+		}
+		
+
+		 
+		 RequestDispatcher dispatcher=req.getRequestDispatcher("index.jsp");
+		 dispatcher.forward(req, resp);
+		 
 	
 
 }

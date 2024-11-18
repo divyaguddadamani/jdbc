@@ -1,4 +1,4 @@
-package com.java.order.dto;
+package com.java.employee.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -9,15 +9,16 @@ import lombok.ToString;
 @AllArgsConstructor
 @Setter
 @Getter
-@ToString
 @EqualsAndHashCode
-public class OrderDto {
-	private String food_name;
-	private int price;
-	private String c_name;
-	private String c_phone;
-	private String quantity;
+@ToString
+
+public class EmployeDto {
 	
-	
+	private int id;
+	private String name;
+	private long phone;
+	private String email;
+	private int age;
+	private int sal;
 
 }
